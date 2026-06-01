@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://newpage-backend-0gyx.onrender.com",
+  baseURL: "http://localhost:3001",
 });
 
 //  attach token
