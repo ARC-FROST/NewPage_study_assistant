@@ -106,19 +106,31 @@ export default function QuizPage() {
   };
 
   const handleSubmitQuiz = () => {
-    let total = 0;
+  let total = 0;
 
-    quiz.forEach((q, index) => {
-      if (
-        answers[index] ===
-        q.correctAnswer
-      ) {
-        total++;
-      }
-    });
+  quiz.forEach((q, index) => {
+    console.log(
+      "Selected:",
+      answers[index]
+    );
 
-    setScore(total);
-  };
+    console.log(
+      "Correct:",
+      q.correctAnswer
+    );
+
+    if (
+      answers[index]?.trim() ===
+      q.correctAnswer?.trim()
+    ) {
+      total++;
+    }
+  });
+
+  console.log("Final Score:", total);
+
+  setScore(total);
+};
 
   return (
     <div>

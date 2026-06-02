@@ -25,7 +25,9 @@ export default function PDFUpload({
 
       setSelectedNoteId(res.id);
 
-      setPage("chat");
+      if (setPage) {
+  setPage("chat");
+}
     } catch (err) {
       alert("Upload failed");
     }
